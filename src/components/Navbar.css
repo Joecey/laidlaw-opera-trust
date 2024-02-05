@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.nav-link {
+		@apply block py-2 px-3 hover:text-laidlawLightRed transition-all duration-100;
+	}
+}
