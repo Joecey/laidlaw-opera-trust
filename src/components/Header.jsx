@@ -10,7 +10,7 @@ export default function HeaderGlobal() {
 			>
 				<div class="w-2/3 flex justify-center items-center p-6 gap-6 bg-laidlawRed text-white">
 					<div class="hidden w-full md:block md:w-auto">
-						<ul class="text-xl flex flex-row justify-center items-center">
+						{/* <ul class="text-xl flex flex-row justify-center items-center">
 							<li>
 								<a
 									href="/"
@@ -25,7 +25,7 @@ export default function HeaderGlobal() {
 									About
 								</a>
 							</li>
-						</ul>
+						</ul> */}
 					</div>
 
 					<a
@@ -40,7 +40,7 @@ export default function HeaderGlobal() {
 					</a>
 
 					<div class="hidden w-full md:block md:w-auto">
-						<ul class="text-xl flex flex-row justify-center items-center">
+						{/* <ul class="text-xl flex flex-row justify-center items-center">
 							<li>
 								<a
 									href="/"
@@ -55,7 +55,7 @@ export default function HeaderGlobal() {
 									Contact
 								</a>
 							</li>
-						</ul>
+						</ul> */}
 					</div>
 				</div>
 			</nav>
