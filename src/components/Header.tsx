@@ -13,7 +13,7 @@ export default function HeaderGlobal() {
 						<ul className="text-xl font-semibold flex flex-row justify-center items-center">
 							<li>
 								<a
-									href="/"
+									href="#Home"
 									className="nav-link"
 									aria-current="page"
 								>
@@ -21,8 +21,14 @@ export default function HeaderGlobal() {
 								</a>
 							</li>
 							<li>
-								<a href="/" className="nav-link">
-									About
+								<a href="#Mission" className="nav-link">
+									Mission
+								</a>
+							</li>
+
+							<li>
+								<a href="#Invest" className="nav-link">
+									Invest
 								</a>
 							</li>
 						</ul>
@@ -46,7 +52,7 @@ export default function HeaderGlobal() {
 						<ul className="text-xl font-semibold flex flex-row justify-center items-center">
 							<li>
 								<a
-									href="/"
+									href="#Trustees"
 									className="nav-link"
 									aria-current="page"
 								>
@@ -54,7 +60,12 @@ export default function HeaderGlobal() {
 								</a>
 							</li>
 							<li>
-								<a href="/" className="nav-link">
+								<a href="#News" className="nav-link">
+									News
+								</a>
+							</li>
+							<li>
+								<a href="#Contact" className="nav-link">
 									Contact
 								</a>
 							</li>

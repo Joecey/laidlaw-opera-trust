@@ -8,9 +8,6 @@ export default {
 	],
 	theme: {
 		extend: {
-			fontFamily: {
-				sans: ['"Josefin Sans"', ...defaultTheme.fontFamily.sans],
-			},
 			colors: {
 				laidlawRed: "#d51f35",
 				laidlawTeal: "#23a698",
@@ -18,6 +15,7 @@ export default {
 				laidlawLightRed: "#fabbcb",
 				laidlawLightBlue: "#b1e4e3",
 				laidlawPurple: "#572c5f",
+				boneWhite: "#F9F6EE",
 			},
 		},
 	},

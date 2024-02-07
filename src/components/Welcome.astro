@@ -1,30 +1,32 @@
 ---
-// functions go here
+// tailwind layers in astro
+const bigText = "text-white text-[14rem] text-left font-bold relative";
 ---
 
 <div
+	id="Home"
 	class=`w-full h-screen bg-[url(../assets/opera_banner.jpg)] bg-cover bg-center`
 >
-	<div
-		class="w-full h-full flex flex-col justify-center items-center backdrop-brightness-[30%]"
-	>
-		<h1 class="text-white text-4xl w-7/12 text-center font-bold relative">
-			Welcome to the Laidlaw Opera Trust
-		</h1>
-		<p class="text-white text-2xl w-1/2 text-center">
-			This website is currently under construction and will be available
-			to the public in the coming weeks
-		</p>
+	<div class="w-full h-full backdrop-brightness-[30%] flex justify-between">
+		<div
+			class="flex flex-col justify-center items-start w-full h-full ml-6"
+		>
+			<h1 class={bigText}>Laidlaw</h1>
+			<h1 class={bigText}>Opera</h1>
+			<h1 class={bigText}>Trust</h1>
+		</div>
 
-		<p class="text-white text-xl w-1/3 text-center font-semibold">
-			For further information, contact kate.roberts@laidlawopera.com
-		</p>
+		<div class="flex flex-col justify-center items-end w-2/3 h-full mr-10">
+			<p class="text-5xl text-right">
+				Championing the accessibility and sustainability of Opera
+			</p>
+		</div>
 	</div>
 </div>
 
 <style>
 	h1 {
-		font-size: 4rem;
+		/* font-size: 14rem; */
 		font-weight: 700;
 		line-height: 1;
 		/* text-align: center; */
