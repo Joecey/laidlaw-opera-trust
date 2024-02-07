@@ -10,7 +10,7 @@ export default function HeaderGlobal() {
 			>
 				<div className="w-2/3 flex justify-center items-center p-6 gap-6 bg-laidlawRed text-white">
 					<div className="hidden w-full md:block md:w-auto">
-						<ul className="text-xl flex flex-row justify-center items-center">
+						<ul className="text-xl font-semibold flex flex-row justify-center items-center">
 							<li>
 								<a
 									href="/"
@@ -32,15 +32,18 @@ export default function HeaderGlobal() {
 						href="/"
 						className="flex items-center space-x-3 rtl:space-x-reverse"
 					>
-						<img
-							alt="lot_logo_landscape_white"
-							className="h-16"
-							src={WhiteLogo}
-						/>
+						{" "}
+						<div className="relative w-40">
+							<img
+								alt="lot_logo_landscape_white"
+								className="h-16 w-full object-cover "
+								src={WhiteLogo}
+							/>
+						</div>
 					</a>
 
 					<div className="hidden w-full md:block md:w-auto">
-						<ul className="text-xl flex flex-row justify-center items-center">
+						<ul className="text-xl font-semibold flex flex-row justify-center items-center">
 							<li>
 								<a
 									href="/"
