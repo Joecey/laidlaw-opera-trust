@@ -38,11 +38,10 @@ export default function HeaderGlobal() {
 						href="/"
 						className="flex items-center space-x-3 rtl:space-x-reverse"
 					>
-						{" "}
-						<div className="relative w-40">
+						<div className="relative w-52">
 							<img
 								alt="lot_logo_landscape_white"
-								className="h-16 w-full object-cover "
+								className="h-24"
 								src={WhiteLogo}
 							/>
 						</div>

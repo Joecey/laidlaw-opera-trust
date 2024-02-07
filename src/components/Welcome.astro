@@ -1,13 +1,16 @@
 ---
 // tailwind layers in astro
-const bigText = "text-white text-[14rem] text-left font-bold relative";
+const bigText = "text-white text-[12rem] text-left font-bold relative";
 ---
 
 <div
 	id="Home"
 	class=`w-full h-screen bg-[url(../assets/opera_banner.jpg)] bg-cover bg-center`
 >
-	<div class="w-full h-full backdrop-brightness-[30%] flex justify-between">
+	<!-- TODO: make this all responsive! -->
+	<div
+		class="w-full h-full backdrop-brightness-[30%] flex flex-col md:flex-row justify-between"
+	>
 		<div
 			class="flex flex-col justify-center items-start w-full h-full ml-6"
 		>
