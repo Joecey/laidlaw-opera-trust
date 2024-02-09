@@ -22,7 +22,7 @@ export default function HeaderGlobal() {
 							</li>
 							<li>
 								<a href="#Mission" className="nav-link">
-									Mission
+									Purpose
 								</a>
 							</li>
 
