@@ -1,0 +1,65 @@
+---
+import GranteeIcon from '../GranteeIcon'
+import SavonlinnaIcon from '../../assets/savonlinna.png'
+import Glyndebourne from '../../assets/glyndebourne.jpg'
+
+const granteesIcons = [
+    {
+        imageObject: SavonlinnaIcon,
+        name: 'Savonlinna Opera Festival',
+        altText: 'Savonlinna Opera Festival Icon',
+        padding: 'p-0',
+    },
+
+    {
+        imageObject: Glyndebourne,
+        name: 'Glyndebourne',
+        altText: 'Glyndebourne Icon',
+        padding: 'p-2',
+    },
+
+    {
+        imageObject: SavonlinnaIcon,
+        name: 'Savonlinna Opera Festival',
+        altText: 'Savonlinna Opera Festival Icon',
+        padding: 'p-0',
+    },
+]
+---
+
+<div id="Grantees" class="flex flex-col w-full bg-laidlawTeal gap-2">
+    <h1 class="w-full text-center mt-14 text-7xl uppercase text-white">
+        Our Grantees
+    </h1>
+
+    <div
+        id="grantee icons"
+        class="w-full flex lg:flex-row flex-col justify-center mb-16 gap-10"
+    >
+        {
+            granteesIcons.map((iconObject) => {
+                return (
+                    <GranteeIcon
+                        imageSrc={iconObject.imageObject.src}
+                        alt={iconObject.altText}
+                        name={iconObject.name}
+                        padding={iconObject.padding}
+                    />
+                )
+            })
+        }
+    </div>
+</div>
+
+<style>
+    h1 {
+        /* font-size: 4rem; */
+        font-weight: bold;
+        line-height: 1;
+        /* text-align: center; */
+        margin-bottom: 1rem;
+    }
+    p {
+        margin-bottom: 1rem;
+    }
+</style>

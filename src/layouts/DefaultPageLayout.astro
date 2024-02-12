@@ -1,97 +1,98 @@
 ---
 // define functions between ---
-import HeaderGlobal from "../components/Header.tsx";
-import FooterGlobal from "../components/Footer.tsx";
+import HeaderGlobal from '../components/Header.tsx'
+import FooterGlobal from '../components/Footer.tsx'
 
 interface Props {
-	title: string;
+    title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Laidlaw Opera Trust" />
-		<!-- define meta data for header -->
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<main class="flex-col h-screen justify-between">
-		<HeaderGlobal />
-		<body class="mb-auto">
-			<!-- slot = the same as {children} in next -->
-			<slot />
-		</body>
-		<FooterGlobal />
-	</main>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Laidlaw Opera Trust" />
+        <!-- define meta data for header -->
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <main class="flex-col h-screen justify-between">
+        <HeaderGlobal />
+        <body class="mb-auto">
+            <!-- slot = the same as {children} in next -->
+            <slot />
+        </body>
+        <FooterGlobal />
+    </main>
 
-	<style is:global>
-		@font-face {
-			font-family: "Josefin-sans";
-			src: url("/fonts/JosefinSans.woff2") format("woff2");
-			font-weight: 100 1000;
-			font-style: normal;
-			font-display: block;
-		}
-		/* define css style here */
-		:root {
-			--accent: 136, 58, 234;
-			--accent-light: 224, 204, 250;
-			--accent-dark: 49, 10, 101;
-			--accent-gradient: linear-gradient(
-				45deg,
-				rgb(var(--accent)),
-				rgb(var(--accent-light)) 30%,
-				white 60%
-			);
-		}
-		html {
-			/* scroll behvaious */
-			scroll-behavior: smooth;
-			overflow: scroll;
-			overflow-x: hidden;
-			background-color: #f9f6ee;
-			::-webkit-scrollbar {
-				width: 0; /* Remove scrollbar space */
-				background: transparent; /* Optional: just make scrollbar invisible */
-			}
+    <style is:global>
+        @font-face {
+            font-family: 'Josefin-sans';
+            src: url('/fonts/JosefinSans.woff2') format('woff2');
+            font-weight: 100 1000;
+            font-style: normal;
+            font-display: block;
+        }
+        /* define css style here */
+        :root {
+            --accent: 136, 58, 234;
+            --accent-light: 224, 204, 250;
+            --accent-dark: 49, 10, 101;
+            --accent-gradient: linear-gradient(
+                45deg,
+                rgb(var(--accent)),
+                rgb(var(--accent-light)) 30%,
+                white 60%
+            );
+        }
+        html {
+            /* scroll behvaious */
+            scroll-behavior: smooth;
+            overflow: scroll;
+            overflow-x: hidden;
+            background-color: #f9f6ee;
+            /* width: 100vw; */
+            ::-webkit-scrollbar {
+                width: 0; /* Remove scrollbar space */
+                background: transparent; /* Optional: just make scrollbar invisible */
+            }
 
-			/* font family */
-			font-family:
-				Josefin-sans,
-				-apple-system,
-				BlinkMacSystemFont,
-				"Segoe UI",
-				Roboto,
-				Oxygen,
-				Ubuntu,
-				Cantarell,
-				"Open Sans",
-				"Helvetica Neue",
-				sans-serif;
-		}
+            /* font family */
+            font-family:
+                Josefin-sans,
+                -apple-system,
+                BlinkMacSystemFont,
+                'Segoe UI',
+                Roboto,
+                Oxygen,
+                Ubuntu,
+                Cantarell,
+                'Open Sans',
+                'Helvetica Neue',
+                sans-serif;
+        }
 
-		/* html {
+        /* html {
 			font-family: Josefin-sans;
 		} */
 
-		code {
-			font-family:
-				Menlo,
-				Monaco,
-				Lucida Console,
-				Liberation Mono,
-				DejaVu Sans Mono,
-				Bitstream Vera Sans Mono,
-				Courier New,
-				monospace;
-		}
-	</style>
+        code {
+            font-family:
+                Menlo,
+                Monaco,
+                Lucida Console,
+                Liberation Mono,
+                DejaVu Sans Mono,
+                Bitstream Vera Sans Mono,
+                Courier New,
+                monospace;
+        }
+    </style>
 
 
 </html>

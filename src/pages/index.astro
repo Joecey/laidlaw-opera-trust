@@ -1,45 +1,45 @@
 ---
-import DefaultPageLayout from "../layouts/DefaultPageLayout.astro";
-import Welcome from "../components/Welcome.astro";
-import Mission from "../components/Mission.astro";
-import Grantees from "../components/Grantees.astro";
+import DefaultPageLayout from '../layouts/DefaultPageLayout.astro'
+import Welcome from '../components/sections/Welcome.astro'
+import Mission from '../components/sections/Mission.astro'
+import Grantees from '../components/sections/Grantees.astro'
 ---
 
 <DefaultPageLayout title="Laidlaw Opera Trust">
-	<main>
-		<Welcome />
-		<Grantees />
-		<Mission />
-	</main>
+    <main>
+        <Welcome />
+        <Grantees />
+        <Mission />
+    </main>
 </DefaultPageLayout>
 
 <style>
-	main {
-		margin: auto;
-		/* padding: 1rem; */
-		width: 100%;
-		/* max-width: calc(100% - 2rem); */
-		font-size: 20px;
-		color: white;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		/* text-align: center; */
-		margin-bottom: 1rem;
-	}
-	p {
-		margin-bottom: 1rem;
-	}
+    main {
+        margin: auto;
+        /* padding: 1rem; */
+        width: 100%;
+        /* max-width: calc(100% - 2rem); */
+        font-size: 20px;
+        color: white;
+        line-height: 1.6;
+    }
+    .astro-a {
+        position: absolute;
+        top: -32px;
+        left: 50%;
+        transform: translatex(-50%);
+        width: 220px;
+        height: auto;
+        z-index: -1;
+    }
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        /* text-align: center; */
+        margin-bottom: 1rem;
+    }
+    p {
+        margin-bottom: 1rem;
+    }
 </style>
