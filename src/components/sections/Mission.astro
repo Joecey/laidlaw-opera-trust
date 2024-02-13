@@ -1,6 +1,36 @@
 ---
 import missionImage from '../../assets/opera_banner.webp'
 import { Image } from 'astro:assets'
+import Audience from '../../assets/audience.svg'
+import Handshake from '../../assets/handshake.svg'
+import Opera from '../../assets/opera.svg'
+import UK from '../../assets/uk.svg'
+
+const goals = [
+    {
+        text: 'Bring opera to new audiences, making it accessible and inclusive',
+        altText: 'Laidlaw opera trust - new audiences',
+        imgSrc: Audience,
+    },
+
+    {
+        text: 'Support new and outstanding productions',
+        altText: 'Laidlaw opera trust - support productions',
+        imgSrc: Handshake,
+    },
+
+    {
+        text: 'Help opera to become more sustainable – encouraging innovation and collaboration',
+        altText: 'Laidlaw opera trust - sustainable opera',
+        imgSrc: Opera,
+    },
+
+    {
+        text: 'Sustain and retain British singers in the industry',
+        altText: 'Laidlaw opera trust - Retain British singers',
+        imgSrc: UK,
+    },
+]
 ---
 
 <div id="Mission" class=`w-full flex flex-col`>
@@ -9,29 +39,30 @@ import { Image } from 'astro:assets'
     </h1>
     <div class="flex flex-col items-center lg:flex-row">
         <div
-            class="flex w-full flex-col items-center p-2 md:items-start md:p-0 md:pl-28 lg:w-1/2"
+            class="flex w-full flex-col items-center p-2 md:p-0 lg:w-1/2 lg:items-start lg:pl-28"
         >
             <h1
                 class="relative mt-8 text-center text-6xl text-laidlawGrey lg:mt-0 lg:w-7/12 lg:text-left"
             >
                 Our <span class="text-laidlawTeal">Mission</span>
             </h1>
-            <p class="text-center text-2xl text-laidlawGrey lg:text-left">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p
+                class="text-center text-xl text-laidlawGrey lg:text-left lg:text-4xl"
+            >
+                Live opera captures the most intense emotions; helping us
+                understand each other and life’s biggest themes: <span
+                    class="font-bold text-laidlawRed"
+                    >love, loss, joy, anger
+                </span> and <span class="font-bold text-laidlawRed">hope.</span>
+                It should be part of everyone’s cultural capital.
             </p>
         </div>
 
         <div
-            class="flex w-full justify-center p-4 lg:w-1/2 lg:p-24 lg:pr-20 lg:pt-8"
+            class="flex w-full justify-center p-4 md:pl-20 md:pr-20 lg:w-1/2 lg:p-24 lg:pb-0 lg:pr-20 lg:pt-8"
         >
             <Image
-                alt="Laidlaw Opera Trust Mission"
+                alt="Laidlaw Opera Trust Our Mission"
                 src={missionImage}
                 class="rounded-md"
             />
@@ -40,33 +71,68 @@ import { Image } from 'astro:assets'
 
     <div class="mb-10 mt-4 flex flex-col-reverse items-center lg:flex-row">
         <div
-            class="hidden w-full justify-center p-4 lg:flex lg:w-1/2 lg:pl-28 lg:pt-8"
+            class="hidden w-full justify-center p-4 lg:flex lg:w-1/2 lg:p-0 lg:pl-28"
         >
             <!-- hiding this image in mobile view for better flow -->
             <Image
-                alt="Laidlaw Opera Trust Mission"
+                alt="Laidlaw Opera Trust Our goals"
                 src={missionImage}
-                class="rounded-md"
+                class="mt-20 rounded-md"
             />
         </div>
         <div
-            class="flex flex-col items-center p-4 md:items-start lg:w-1/2 lg:p-24 lg:pr-20"
+            class="flex flex-col items-center p-4 lg:w-1/2 lg:items-start lg:p-24 lg:pr-20"
         >
             <h1
                 class="relative text-center text-6xl text-laidlawGrey lg:w-7/12 lg:text-left"
             >
                 Our <span class="text-laidlawTeal">Goals</span>
             </h1>
-            <p class="text-center text-2xl text-laidlawGrey lg:text-left">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <div class="flex w-full flex-col flex-wrap lg:flex-col">
+                {
+                    goals.map((goal) => {
+                        return (
+                            <div
+                                id={`container-${goal.altText}`}
+                                class="flex flex-col items-center justify-center lg:flex-row lg:justify-start"
+                            >
+                                <Image
+                                    src={goal.imgSrc}
+                                    alt={goal.altText}
+                                    width={100}
+                                    class="m-4 items-center rounded-full bg-laidlawRed p-4 lg:ml-0"
+                                />
+                                <p class="mt-4 w-1/2 text-center text-base text-laidlawGrey lg:w-full lg:text-left lg:text-2xl ">
+                                    {goal.text}
+                                </p>
+                            </div>
+                        )
+                    })
+                }
+            </div>
         </div>
+    </div>
+
+    <div
+        id="Invest"
+        class="mb-10 flex flex-col items-center p-4 lg:items-center"
+    >
+        <h1 class="relative text-center text-6xl text-laidlawGrey">
+            Our <span class="text-laidlawTeal">Investment Focus</span>
+        </h1>
+
+        <p class="text-center text-xl text-laidlawGrey lg:w-1/2 lg:text-2xl">
+            Our investment focus at Laidlaw Opera Trust is driven by our
+            unwavering dedication to championing live opera as an incomparably
+            thrilling and transformative art form. We are committed to fostering
+            the growth and sustainability of opera companies and houses
+            worldwide. Through strategic support and partnership, we aim to
+            expand the reach and repertoire of these institutions, ensuring that
+            audiences everywhere have access to the unparalleled experience of
+            live opera. By investing in the future of this cherished art form,
+            we not only enrich cultural landscapes but also nurture the next
+            generation of opera enthusiasts and artists.
+        </p>
     </div>
 </div>
 

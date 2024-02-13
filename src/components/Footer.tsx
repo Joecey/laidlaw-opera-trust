@@ -1,9 +1,9 @@
 export default function FooterGlobal() {
-	return (
-		<footer>
-			<div className="bg-laidlawGrey w-full text-sm flex justify-center items-center p-6 gap-6 text-white relative">
-				Copyright © 2024 Laidlaw Opera Trust. All rights reserved.
-			</div>
-		</footer>
-	);
+    return (
+        <footer>
+            <div className="relative flex w-full items-center justify-center gap-6 bg-laidlawGrey p-6 text-center text-sm text-white">
+                Copyright © 2024 Laidlaw Opera Trust. All rights reserved.
+            </div>
+        </footer>
+    )
 }

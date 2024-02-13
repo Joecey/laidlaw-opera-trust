@@ -20,11 +20,13 @@ export default function GranteeIcon(props: GranteeIcon) {
                 <img
                     src={props.imageSrc}
                     alt={props.alt}
-                    className={`aspect-square w-36 object-contain lg:w-48 ${props.padding}`}
+                    className={`aspect-square w-40 object-contain lg:w-48 ${props.padding}`}
                 />
             </div>
 
-            <p className="text-wrap text-sm lg:text-xl">{props.name}</p>
+            <p className="w-72 text-wrap text-center text-lg lg:text-2xl">
+                {props.name}
+            </p>
         </div>
     )
 }
