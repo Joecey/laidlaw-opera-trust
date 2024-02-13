@@ -27,14 +27,16 @@ const granteesIcons = [
 ]
 ---
 
-<div id="Grantees" class="flex flex-col w-full bg-laidlawTeal gap-2">
-    <h1 class="w-full text-center mt-14 text-7xl uppercase text-white">
+<div id="Grantees" class="flex w-full flex-col gap-2 bg-laidlawTeal">
+    <h1
+        class="mt-8 w-full pl-1 pr-1 text-center text-4xl uppercase text-white lg:mt-14 lg:p-0 lg:text-7xl"
+    >
         Our Grantees
     </h1>
 
     <div
         id="grantee icons"
-        class="w-full flex lg:flex-row flex-col justify-center mb-16 gap-10"
+        class="mb-16 flex w-full flex-row flex-wrap justify-center gap-10"
     >
         {
             granteesIcons.map((iconObject) => {
