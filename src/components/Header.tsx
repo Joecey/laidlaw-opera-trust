@@ -12,23 +12,17 @@ export default function HeaderGlobal() {
                     <div className="hidden w-full md:block md:w-auto">
                         <ul className="flex flex-row items-center justify-center text-xl font-semibold">
                             <li>
+                                <a href="#Mission" className="nav-link">
+                                    Purpose
+                                </a>
+                            </li>
+                            <li>
                                 <a
                                     href="#Grantees"
                                     className="nav-link"
                                     aria-current="page"
                                 >
                                     Grantees
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#Mission" className="nav-link">
-                                    Purpose
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#Invest" className="nav-link">
-                                    Invest
                                 </a>
                             </li>
                         </ul>
@@ -61,11 +55,6 @@ export default function HeaderGlobal() {
                             <li>
                                 <a href="#News" className="nav-link">
                                     News
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#Contact" className="nav-link">
-                                    Contact
                                 </a>
                             </li>
                         </ul>

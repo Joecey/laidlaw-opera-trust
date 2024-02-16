@@ -24,9 +24,9 @@ export default function GranteeIcon(props: GranteeIcon) {
                 />
             </div>
 
-            <p className="w-72 text-wrap text-center text-lg lg:text-2xl">
+            <h1 className="text-xlfont-semibold w-72 text-wrap text-center lg:text-xl">
                 {props.name}
-            </p>
+            </h1>
         </div>
     )
 }
