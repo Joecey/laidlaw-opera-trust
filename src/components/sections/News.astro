@@ -1,56 +1,14 @@
 ---
-import GranteeIcon from '../GranteeIcon'
-import SavonlinnaIcon from '../../assets/savonlinna.png'
-import Glyndebourne from '../../assets/glyndebourne.jpg'
-import ROH from '../../assets/royalOperaHouse-min.png'
-const granteesIcons = [
-    {
-        imageObject: SavonlinnaIcon,
-        name: 'Savonlinna Opera Festival',
-        altText: 'Savonlinna Opera Festival Icon',
-        padding: 'p-0',
-    },
-
-    {
-        imageObject: Glyndebourne,
-        name: 'Glyndebourne',
-        altText: 'Glyndebourne Icon',
-        padding: 'p-3',
-    },
-
-    {
-        imageObject: ROH,
-        name: 'Royal Opera House',
-        altText: 'Royal Opera House Icon',
-        padding: 'p-7 lg:p-8',
-    },
-]
+// i think we will create an MDX pipeline for this. Thoughts?
 ---
 
 <div id="News" class="flex w-full flex-col gap-2 bg-laidlawRed">
     <h1
-        class="mt-8 w-full pl-1 pr-1 text-center text-5xl uppercase text-laidlawGrey lg:mt-14 lg:p-0 lg:text-7xl"
+        class="mt-8 w-full pl-1 pr-1 text-center text-5xl uppercase text-white lg:mt-14 lg:p-0 lg:text-7xl"
     >
         News
     </h1>
-
-    <div
-        id="grantee icons"
-        class="mb-16 flex w-full flex-col flex-wrap gap-10 md:flex-row md:justify-center"
-    >
-        {
-            granteesIcons.map((iconObject) => {
-                return (
-                    <GranteeIcon
-                        imageSrc={iconObject.imageObject.src}
-                        alt={iconObject.altText}
-                        name={iconObject.name}
-                        padding={iconObject.padding}
-                    />
-                )
-            })
-        }
-    </div>
+    <p>Todo: complete news components for this</p>
 </div>
 
 <style>
