@@ -29,10 +29,10 @@ export default function TrusteeItem(props: TrusteeItem) {
             />
             <div id="trustee_text_content" className="flex flex-col">
                 <div id="name_and_title">
-                    <h1 className="text-4xl font-bold text-laidlawTeal">
+                    <h1 className="text-3xl font-bold text-laidlawTeal">
                         {props.name}
                     </h1>
-                    <h2 className="text-3l font-semibold text-laidlawGrey">
+                    <h2 className="text-xl font-semibold text-laidlawGrey">
                         {props.title}
                     </h2>
                 </div>
