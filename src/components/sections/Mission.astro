@@ -1,5 +1,6 @@
 ---
-import missionImage from '../../assets/opera_banner.webp'
+import missionImage from '../../assets/Jussi_Silvennoinen.webp'
+import investImage from '../../assets/Valtteri_Hirvonen.webp'
 import { Image } from 'astro:assets'
 import Audience from '../../assets/audience.svg'
 import Handshake from '../../assets/handshake.svg'
@@ -33,47 +34,60 @@ const goals = [
 ]
 ---
 
-<div id="Mission" class=`w-full flex flex-col`>
-    <h1 class="mt-20 w-full text-center text-7xl uppercase text-laidlawGrey">
+<div id="Mission" class=`w-full flex flex-col `>
+    <h1 class="mt-20 w-full text-center text-6xl uppercase text-laidlawGrey">
         The Trust <span class="text-laidlawRed">Purpose</span>
     </h1>
-    <div class="flex flex-col items-center justify-center lg:flex-row">
+    <div class="mt-10 flex flex-col items-center justify-center lg:flex-row">
         <div
             class="flex w-full flex-col items-center p-2 md:p-0 lg:w-1/3 lg:items-start"
         >
             <h1
-                class="relative mt-8 text-center text-4xl text-laidlawGrey lg:mt-0 lg:w-7/12 lg:text-left"
+                class="relative mt-8 text-left text-4xl text-laidlawGrey lg:mt-0 lg:w-7/12"
             >
                 Our <span class="text-laidlawRed">Mission</span>
             </h1>
             <p class="w-5/6 text-left text-xl text-laidlawGrey">
-                Live opera captures the most intense emotions; helping us
-                understand each other and life’s biggest themes: <span
-                    class="font-bold text-laidlawRed"
+                Opera remains a thrilling and exciting art form that can by
+                enjoyed by all; helping us understand each other and life’s
+                biggest themes: <span class="font-bold text-laidlawRed"
                     >love, loss, joy, anger
                 </span> and <span class="font-bold text-laidlawRed">hope.</span>
                 It should be part of everyone’s cultural capital.
             </p>
+            <p class="w-5/6 text-left text-xl text-laidlawGrey">
+                The Laidlaw Opera Trust is committed fostering the <span
+                    class="font-bold text-laidlawRed"
+                    >growth and sustainability of opera companies and houses
+                    worldwide.</span
+                > Through strategic support and partnership, we aim to expand the
+                reach and repertoire of these institutions, ensuring that audiences
+                everywhere have access to the unparalleled experience of live opera.
+                By investing in the future of this cherished art form, we not only
+                enrich cultural landscapes but also nurture the next generation of
+                opera enthusiasts and artists.
+            </p>
         </div>
 
-        <Image
-            alt="Laidlaw Opera Trust Our Mission"
-            src={missionImage}
-            class="w-auto p-8 md:w-[40rem]"
-        />
+        <div id="image-container-mission">
+            <Image
+                alt="Laidlaw Opera Trust Our Mission"
+                src={missionImage}
+                class="w-auto p-8 md:w-[45rem]"
+            />
+            <p class="mt-[-2rem] pl-8 text-sm text-laidlawGrey">
+                Source: Jussi Silvennoinen
+            </p>
+        </div>
     </div>
 
     <div
         class="mb-10 mt-4 flex flex-col-reverse justify-center lg:flex-row lg:gap-10"
     >
         <!-- hiding this image in mobile view for better flow -->
-        <Image
-            alt="Laidlaw Opera Trust Our goals"
-            src={missionImage}
-            class="hidden w-auto object-contain p-8 md:w-[35rem] lg:block xl:w-[40rem]"
-        />
+
         <div
-            class="flex w-full flex-col items-center lg:w-[40rem] lg:items-start"
+            class="mt-10 flex w-full flex-col items-center lg:w-[40rem] lg:items-start"
         >
             <h1
                 class="relative text-center text-4xl text-laidlawGrey lg:w-7/12 lg:text-left"
@@ -98,7 +112,7 @@ const goals = [
                                     width={100}
                                     class="m-4 items-center rounded-full bg-laidlawTeal p-4 lg:ml-0"
                                 />
-                                <p class="mt-4 pl-8 pr-8 text-left text-base text-laidlawGrey lg:w-full lg:text-left lg:text-xl ">
+                                <p class="mt-4 pl-8 pr-8 text-center text-xl text-laidlawGrey md:text-2xl lg:w-full lg:text-left">
                                     {goal.text}
                                 </p>
                             </div>
@@ -110,27 +124,48 @@ const goals = [
     </div>
 
     <div
-        id="Invest"
-        class="mb-10 flex flex-col items-center p-4 lg:items-center"
+        id="invest"
+        class="mb-20 flex flex-col items-center justify-center lg:flex-row"
     >
-        <h1 class="relative text-center text-4xl text-laidlawGrey">
-            Our <span class="text-laidlawRed">Investment Focus</span>
-        </h1>
-
-        <p
-            class="w-3/4 text-left text-base text-laidlawGrey lg:w-1/2 lg:text-xl"
+        <div
+            class="flex w-full flex-col items-center p-2 md:p-0 lg:w-1/3 lg:items-start"
         >
-            Our investment focus at Laidlaw Opera Trust is driven by our
-            unwavering dedication to championing live opera as an incomparably
-            thrilling and transformative art form. We are committed to fostering
-            the growth and sustainability of opera companies and houses
-            worldwide. Through strategic support and partnership, we aim to
-            expand the reach and repertoire of these institutions, ensuring that
-            audiences everywhere have access to the unparalleled experience of
-            live opera. By investing in the future of this cherished art form,
-            we not only enrich cultural landscapes but also nurture the next
-            generation of opera enthusiasts and artists.
-        </p>
+            <h1
+                class="relative mt-8 text-center text-4xl text-laidlawGrey lg:mt-0 lg:w-7/12 lg:text-left"
+            >
+                Our <span class="text-laidlawRed">Investment Focus</span>
+            </h1>
+
+            <p class="w-5/6 text-left text-xl text-laidlawGrey">
+                We are dedicated to supporting <span
+                    class="font-bold text-laidlawRed"
+                >
+                    opera houses, productions, and seasonal festivals
+                </span>spanning the globe. Our commitment extends beyond borders
+                as we seek to uphold the rich tradition of opera while fostering
+                its evolution in diverse cultural landscapes.
+            </p>
+            <p class="w-5/6 text-left text-xl text-laidlawGrey">
+                While we prioritize the advancement of British opera singers, we
+                also recognize the global talent pool and are committed to
+                upholding the wellbeing of <span
+                    class="font-bold text-laidlawRed"
+                    >opera singers worldwide.</span
+                > Through strategic investments and targeted support, we aim to cultivate
+                a thriving opera ecosystem that celebrates excellence, innovation,
+                and inclusivity on both local and international stages.
+            </p>
+        </div>
+        <div id="image-container-invest">
+            <Image
+                alt="Laidlaw Opera Trust Our Mission"
+                src={investImage}
+                class="w-auto p-8 md:w-[45rem]"
+            />
+            <p class="mt-[-2rem] pl-8 text-sm text-laidlawGrey">
+                Source: Valtteri Hirvonen
+            </p>
+        </div>
     </div>
 </div>
 
