@@ -86,17 +86,15 @@ const goals = [
     >
         <!-- hiding this image in mobile view for better flow -->
 
-        <div
-            class="mt-10 flex w-full flex-col items-center lg:w-[40rem] lg:items-start"
-        >
+        <div id="goals" class="mt-10 flex w-full flex-col items-center">
             <h1
-                class="relative text-center text-4xl text-laidlawGrey lg:w-7/12 lg:text-left"
+                class="relative text-center text-4xl text-laidlawGrey lg:w-7/12"
             >
                 Our <span class="text-laidlawRed">Goals</span>
             </h1>
             <div
                 id="goals_container"
-                class="flex flex-row flex-wrap lg:flex-col"
+                class="flex flex-row flex-wrap justify-center"
             >
                 <!-- TODO: make this a flex-row that can be wrapped -->
                 {
@@ -104,7 +102,7 @@ const goals = [
                         return (
                             <div
                                 id={`container-${goal.altText}`}
-                                class="flex w-1/2 flex-col items-center justify-start lg:w-full lg:flex-row lg:justify-start"
+                                class="flex w-1/2 flex-col items-center justify-start lg:w-1/5 "
                             >
                                 <Image
                                     src={goal.imgSrc}
@@ -112,7 +110,7 @@ const goals = [
                                     width={100}
                                     class="m-4 items-center rounded-full bg-laidlawTeal p-4 lg:ml-0"
                                 />
-                                <p class="mt-4 pl-8 pr-8 text-center text-xl text-laidlawGrey md:text-2xl lg:w-full lg:text-left">
+                                <p class="mt-4 pl-8 pr-8 text-center text-xl text-laidlawGrey  lg:w-full ">
                                     {goal.text}
                                 </p>
                             </div>
