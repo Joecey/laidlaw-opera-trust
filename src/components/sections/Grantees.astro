@@ -43,9 +43,12 @@ const granteesIcons = [
 ]
 ---
 
-<div id="Grantees" class="flex w-full flex-col gap-2 bg-laidlawRed">
+<div
+    id="Grantees"
+    class="flex w-full flex-col items-center gap-2 bg-laidlawRed"
+>
     <h1
-        class="mt-12 w-full p-2 text-center text-6xl uppercase text-white lg:mt-14 lg:p-0 lg:text-5xl"
+        class="mt-20 w-full p-2 text-center text-6xl uppercase text-white lg:p-0"
     >
         Our Grantees
     </h1>
@@ -60,8 +63,9 @@ const granteesIcons = [
 
     <div
         id="grantee icons"
-        class="mb-16 flex w-full flex-row flex-wrap justify-center gap-10"
+        class="mb-20 mt-10 flex w-full flex-row flex-wrap justify-center gap-10 lg:w-5/6"
     >
+        <!-- TODO: MAKE IT SO THAT WHEN YOU CLICK, IT REDIRECT TO WEBSITE -->
         {
             granteesIcons.map((iconObject) => {
                 return (
