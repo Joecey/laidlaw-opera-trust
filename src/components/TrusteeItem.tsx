@@ -20,7 +20,7 @@ export default function TrusteeItem(props: TrusteeItem) {
     return (
         <div
             id="trusteeContainer"
-            className=" flex flex-col items-center gap-8 p-8 md:flex-row md:items-start lg:w-3/5"
+            className=" flex flex-col items-center gap-8 p-8 md:flex-row md:items-start lg:w-8/12"
         >
             <img
                 alt={props.altText}
