@@ -1,110 +1,51 @@
 ---
-import DefaultPageLayout from "../layouts/DefaultPageLayout.astro";
-// import { Image } from "astro:assets";
+import DefaultPageLayout from '../layouts/DefaultPageLayout.astro'
+import Welcome from '../components/sections/Welcome.astro'
+import Mission from '../components/sections/Mission.astro'
+import Grantees from '../components/sections/Grantees.astro'
+import Trustees from '../components/sections/Trustees.astro'
+import News from '../components/sections/News.astro'
+import Contact from '../components/sections/Contact.astro'
 ---
 
-<DefaultPageLayout title="Laidlaw Opera Trust - Home">
-	<main>
-		<!-- todo: make tha banner full width, add colour overlay, and add white coming soon text -->
-		<div
-			class=`w-full h-screen bg-[url(../assets/opera_banner.jpg)] bg-cover bg-center`
-		>
-			<div
-				class="w-full h-full flex flex-col justify-center items-center backdrop-brightness-[30%]"
-			>
-				<!-- <Image
-					src={operaTrustRed}
-					alt="Laildaw opera trust red logo"
-					class="h-32 w-auto mb-6 bg-white p-2"
-				/> -->
-				<h1 class="text-white text-4xl p-2 md:w-7/12 text-center font-bold">
-					Welcome to the Laidlaw Opera Trust
-				</h1>
-
-				<p class="text-white text-2xl p-2 md:w-1/2 text-center">
-
-					This website is currently under construction and will be
-					available to the public in the coming weeks
-				</p>
-
-
-				<p class="text-white text-xl md:w-1/2  text-center font-semibold">
-					For further information, contact
-					<a href="mailto:kate.roberts@laidlawopera.co.uk">kate.roberts@laidlawopera.co.uk</a>
-				</p>
-			</div>
-		</div>
-	</main>
-
-	<!-- <div class="w-full h-[50vh] bg-white text-black">
-		<h2>Contact us</h2>
-
-		<!-- <div class="w-full bg-laidlawTeal h-20">
-			text
-		</div> -->
+<DefaultPageLayout title="Laidlaw Opera Trust">
+    <main>
+        <Welcome />
+        <Mission />
+        <Grantees />
+        <Trustees />
+        <News />
+        <Contact />
+    </main>
 </DefaultPageLayout>
 
 <style>
-	main {
-		margin: auto;
-		/* padding: 1rem; */
-		width: 100%;
-		/* max-width: calc(100% - 2rem); */
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		/* text-align: center; */
-		margin-bottom: 1rem;
-	}
-	p {
-		margin-bottom: 1rem;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(
-			rgba(var(--accent-dark), 66%),
-			rgba(var(--accent-dark), 33%)
-		);
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+    main {
+        margin: auto;
+        /* padding: 1rem; */
+        width: 100%;
+        /* max-width: calc(100% - 2rem); */
+        font-size: 20px;
+        color: white;
+        line-height: 1.6;
+    }
+    .astro-a {
+        position: absolute;
+        top: -32px;
+        left: 50%;
+        transform: translatex(-50%);
+        width: 220px;
+        height: auto;
+        z-index: -1;
+    }
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        /* text-align: center; */
+        margin-bottom: 1rem;
+    }
+    p {
+        margin-bottom: 1rem;
+    }
 </style>

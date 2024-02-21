@@ -1,0 +1,115 @@
+---
+import TrusteeItem from '../TrusteeItem'
+import LordLaidlaw from '../../assets/LL.webp'
+import AnneMarabiniYoung from '../../assets/AMY.webp'
+
+interface TrusteeItem {
+    altText: string
+    imageSrc: string
+    name: string
+    title: string
+    bio: Array<string>
+    moreInfo: Array<string>
+}
+
+const TrusteesArray = [
+    {
+        altText: 'Lord Laidlaw of Rothiemay Headshot',
+        imageSrc: LordLaidlaw.src,
+        name: 'Lord Laidlaw of Rothiemay',
+        title: 'Chair, Laidlaw Opera Trust',
+        bio: [
+            `Lord Laidlaw is a committed philanthropist, serial entrepreneur, 
+        and accomplished sportsman. A graduate of Leeds University and Columbia  
+        Business School, Lord Laidlaw founded the Institute for International Research Ltd (IIR) 
+        which became the world’s largest conference and training company. He sold it in 2005 for $1.4bn to Informa Plc.`,
+        ],
+        moreInfo: [
+            `He has since gone on to build a large property company and invest extensively in sustainable energy, including the Veja Mate Offshore Wind Farm where he was the majority owner. His most recent project is building a renewable power resource in Rwanda.`,
+            `Lord Laidlaw was one of the very earliest business leaders to see diversity in his management team as an important strength. His leadership team had a majority of women and members of the LGBTQ+ community. Lord Laidlaw believes passionately that performance should be rewarded and was a pioneer in sharing profits with his employees.`,
+            `A committed internationalist, he considers it vital for the next generation of leaders to have and understand global connections. His generous philanthropy, 
+            funding academies and scholarships, centres on two core beliefs; firstly that inspirational education can break the cycle of poverty, and secondly the need for a new generation of diverse, 
+            passionate and adaptive leaders with a world view. The Women in Business movement that Lord Laidlaw funds, both helps to build a more diverse future leadership and pays tribute to the many 
+            women who helped make IIR so successful.`,
+        ],
+    },
+
+    {
+        altText: ' Anne Marabini Young Headshot',
+        imageSrc: AnneMarabiniYoung.src,
+        name: 'Anne Marabini Young',
+        title: 'Founder and General Director of Diva Opera',
+        bio: [
+            `Anne Marabini Young began her career as a freelance opera singer, receiving prestigious
+            awards such as The Joan Sutherland Scholarship and winning the Sydney Sun Aria
+            competition. She amassed over 20 years of experience with many well-renowned
+            organisations including but certainly not limited to Opera Australia, Television New Zealand,
+            Buxton Festival, English National Opera, and Glyndebourne Opera. `,
+
+            `In 1996, she established Diva Opera, a touring chamber opera company that has gained
+            international acclaim under her leadership as General Director for the past 28 years.
+            Overseeing all aspects of production, she has curated and executed 28 annual tours across
+            the UK, Europe, and internationally, comprising over 2,000 opera performances and
+            numerous galas and concerts.`,
+        ],
+        moreInfo: [
+            `Her role as General Director encompasses a range of responsibilities including auditioning
+            and casting opera singers, negotiating contracts with artists and agents, managing finances,
+            and collaborating closely with music agents, festival directors, and other industry
+            professionals. Additionally, her commitment to Opera extends to organizing programs for
+            school children in the UK and France, fostering a deeper engagement with opera among
+            younger audiences.`,
+        ],
+    },
+]
+---
+
+<div
+    id="Trustees"
+    class="mb-20 flex w-full flex-col items-center gap-2 bg-boneWhite"
+>
+    <h1
+        class="mt-20 w-full p-2 text-center text-6xl uppercase text-laidlawRed lg:p-0"
+    >
+        Our Trustees
+    </h1>
+
+    <p
+        class="w-3/4 self-center p-2 text-left text-xl text-laidlawGrey lg:w-1/2"
+    >
+        Our dedicated trustees are committed to providing the essential
+        resources and guidance necessary to bring our mission to fruition. Our
+        trustees are all connected to Opera either as performers, or acting as
+        key members for productions and houses
+    </p>
+
+    <!-- here we will create react component for each of the trustees -->
+    {
+        TrusteesArray.map((trusteeItem: TrusteeItem) => {
+            return (
+                <TrusteeItem
+                    client:visible
+                    altText={trusteeItem.altText}
+                    imageSrc={trusteeItem.imageSrc}
+                    name={trusteeItem.name}
+                    title={trusteeItem.title}
+                    bio={trusteeItem.bio}
+                    moreInfo={trusteeItem.moreInfo}
+                />
+            )
+        })
+    }
+</div>
+
+<style>
+    h1 {
+        /* font-size: 4rem; */
+        font-weight: bold;
+        line-height: 1;
+        /* text-align: center; */
+        margin-bottom: 1rem;
+    }
+    p {
+        margin-bottom: 1rem;
+    }
+</style>

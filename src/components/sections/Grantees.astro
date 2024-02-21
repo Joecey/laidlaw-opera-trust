@@ -1,0 +1,95 @@
+---
+import GranteeIcon from '../GranteeIcon'
+import SavonlinnaIcon from '../../assets/savonlinna.png'
+import Glyndebourne from '../../assets/glyndebourne.jpg'
+import ROH from '../../assets/royalOperaHouse-min.png'
+import Diva from '../../assets/diva_opera.svg'
+import GrangeFestival from '../../assets/GrangeFestival.webp'
+const granteesIcons = [
+    {
+        imageObject: SavonlinnaIcon,
+        name: 'Savonlinna Opera Festival',
+        altText: 'Savonlinna Opera Festival Icon',
+        padding: 'p-0',
+    },
+
+    {
+        imageObject: Glyndebourne,
+        name: 'Glyndebourne',
+        altText: 'Glyndebourne Icon',
+        padding: 'p-3',
+    },
+
+    {
+        imageObject: ROH,
+        name: 'Royal Opera House',
+        altText: 'Royal Opera House Icon',
+        padding: 'p-7 lg:p-8',
+    },
+
+    {
+        imageObject: Diva,
+        name: 'Diva Opera',
+        altText: 'Royal Opera Icon',
+        padding: 'p-2',
+    },
+
+    {
+        imageObject: GrangeFestival,
+        name: 'Grange Festival',
+        altText: 'Grange Festival Icon',
+        padding: 'p-4',
+    },
+]
+---
+
+<div
+    id="Grantees"
+    class="flex w-full flex-col items-center gap-2 bg-laidlawRed"
+>
+    <h1
+        class="mt-20 w-full p-2 text-center text-6xl uppercase text-white lg:p-0"
+    >
+        Our Grantees
+    </h1>
+
+    <p class="w-3/4 self-center p-2 text-left text-xl lg:w-1/2">
+        The Laidlaw Opera Trust boasts a stellar portfolio of grantees,
+        encompassing esteemed opera houses and vibrant festivals. Through
+        strategic investments, we empower our grantees to push artistic
+        boundaries and captivate global audiences with their innovative
+        productions
+    </p>
+
+    <div
+        id="grantee icons"
+        class="mb-20 mt-10 flex w-full flex-row flex-wrap justify-center gap-10 lg:w-5/6"
+    >
+        <!-- TODO: MAKE IT SO THAT WHEN YOU CLICK, IT REDIRECT TO WEBSITE -->
+        {
+            granteesIcons.map((iconObject) => {
+                return (
+                    <GranteeIcon
+                        imageSrc={iconObject.imageObject.src}
+                        alt={iconObject.altText}
+                        name={iconObject.name}
+                        padding={iconObject.padding}
+                    />
+                )
+            })
+        }
+    </div>
+</div>
+
+<style>
+    h1 {
+        /* font-size: 4rem; */
+        font-weight: bold;
+        line-height: 1;
+        /* text-align: center; */
+        margin-bottom: 1rem;
+    }
+    p {
+        margin-bottom: 1rem;
+    }
+</style>
