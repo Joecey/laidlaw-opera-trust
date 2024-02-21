@@ -61,6 +61,12 @@ export default function HeaderGlobal() {
                     </div>
                 </div>
             </nav>
+            <div id="under-construction" className=" w-full bg-boneWhite">
+                <p className="p-2 text-center text-xl font-bold text-laidlawGrey">
+                    This site is under construction and will be available to the
+                    public in the coming weeks
+                </p>
+            </div>
         </header>
     )
 }
